@@ -42,9 +42,3 @@ Designed and developed as part of the **Database Management Systems (DBMS)** cou
 - Properly normalized schema (3NF) to eliminate redundancy
 - Well-defined relationships between entities:
   - `Airports`, `Flights`, `Passengers`, `Bookings`, `Staff`, `Tickets`, `Payments`, etc.
-
-*(You can add your ER diagram image here)*
-
-```sql
--- Example: Add image of ER Diagram
-<image-card alt="ER Diagram" src="images/er_diagram.png" ></image-card>
