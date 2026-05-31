@@ -1,121 +1,50 @@
-✈️ Airport Management System
-A database-driven system for efficiently managing flights, bookings, passengers, and airport staff — built as part of a DBMS coursework project.
+# 🛫 Airport Management System
 
-📌 Overview
-The Airport Management System models the core operations of an airport using a relational database. It demonstrates real-world application of database design, SQL querying, and PL/SQL automation through stored procedures, triggers, and functions.
+A robust **database-driven Airport Management System** built using **MySQL** and **PL/SQL**. This project efficiently manages flights, passenger bookings, staff assignments, and real-time airport operations while ensuring data integrity through advanced database concepts.
 
-🛠️ Tech Stack
-LayerTechnologyDatabaseMySQLQuery LanguageSQLProcedural LanguagePL/SQLDesign ConceptsER/EER Diagrams, Normalization (up to 3NF)
+Designed and developed as part of the **Database Management Systems (DBMS)** coursework, demonstrating practical implementation of ER/EER modeling, normalization, triggers, stored procedures, and functions.
 
-⚙️ Features
+---
 
-Flight Management — Add, update, and retrieve flight schedules and details
-Passenger Records — Store and manage passenger profiles and travel history
-Booking System — Handle reservations with automated validation and conflict checks
-Staff Management — Maintain staff roles, shift schedules, and flight assignments
-Triggers & Procedures — Automate workflows and enforce data integrity rules
-Cursors & Functions — Support complex data traversal and reusable logic
+## ✨ Features
 
+### **Core Functionalities**
+- **Flight Management** – Add, update, cancel, and track flight schedules with real-time status
+- **Passenger Management** – Complete passenger profiles with booking history
+- **Booking System** – Smart reservation handling with seat availability and validation
+- **Staff Management** – Manage airport staff with roles, departments, and shift assignments
+- **Automated Workflows** – Powerful use of **Triggers**, **Stored Procedures**, and **Functions**
 
-🗂️ Project Structure
-airport-management-system/
-│
-├── schema/
-│   ├── create_tables.sql        # DDL — table definitions and constraints
-│   └── insert_data.sql          # Sample/seed data
-│
-├── procedures/
-│   ├── booking_procedures.sql   # Booking management logic
-│   ├── flight_procedures.sql    # Flight operations
-│   └── staff_procedures.sql     # Staff assignment logic
-│
-├── triggers/
-│   └── triggers.sql             # Data integrity and automation triggers
-│
-├── functions/
-│   └── functions.sql            # Reusable PL/SQL functions
-│
-├── cursors/
-│   └── cursors.sql              # Cursor-based data traversal
-│
-├── diagrams/
-│   ├── er_diagram.png           # Entity-Relationship diagram
-│   └── eer_diagram.png          # Enhanced ER diagram
-│
-└── README.md
+### **Advanced Database Features**
+- **Data Integrity** – Enforced using constraints, triggers, and referential integrity
+- **Automation** – Automatic fare calculation, status updates, and booking confirmations
+- **Reporting** – Generate insightful queries for flight occupancy, revenue, and passenger statistics
+- **Error Handling** – Robust exception handling in PL/SQL procedures
 
-Adjust the structure above to match your actual files.
+---
 
+## 🛠️ Tech Stack
 
-🗃️ Database Design
-Entities
+| Component              | Technology                          |
+|-----------------------|-------------------------------------|
+| **Database**          | MySQL                               |
+| **Query Language**    | SQL                                 |
+| **Procedural Language**| PL/SQL                              |
+| **Database Design**   | ER & EER Diagrams                   |
+| **Normalization**     | Up to **3NF**                       |
+| **Tools**             | Triggers, Stored Procedures, Functions, Cursors |
 
-Flight — Flight number, origin, destination, schedule, status
-Passenger — Personal details, contact info, booking history
-Booking — Reservation ID, seat, class, payment status
-Staff — Employee ID, role, department, shift assignments
-Gate / Terminal — Gate assignments and terminal mapping
+---
 
-Normalization
-The schema is normalized up to Third Normal Form (3NF) to eliminate redundancy and ensure data integrity.
+## 📊 Database Design
 
-🚀 Getting Started
-Prerequisites
+- **Entity-Relationship (ER) & Enhanced ER (EER) Diagrams** included
+- Properly normalized schema (3NF) to eliminate redundancy
+- Well-defined relationships between entities:
+  - `Airports`, `Flights`, `Passengers`, `Bookings`, `Staff`, `Tickets`, `Payments`, etc.
 
-MySQL 8.0 or higher
-A SQL client (MySQL Workbench, DBeaver, or CLI)
+*(You can add your ER diagram image here)*
 
-Setup
-
-Clone the repository:
-
-bash   git clone https://github.com/your-username/airport-management-system.git
-   cd airport-management-system
-
-Create the database and run the schema:
-
-sql   CREATE DATABASE airport_db;
-   USE airport_db;
-   SOURCE schema/create_tables.sql;
-
-Load sample data:
-
-sql   SOURCE schema/insert_data.sql;
-
-Load procedures, triggers, and functions:
-
-sql   SOURCE procedures/booking_procedures.sql;
-   SOURCE triggers/triggers.sql;
-   SOURCE functions/functions.sql;
-
-📖 Usage Examples
-sql-- View all upcoming flights
-SELECT * FROM flights WHERE departure_time > NOW();
-
--- Book a seat for a passenger
-CALL book_seat(passenger_id, flight_id, seat_class);
-
--- Get all bookings for a specific flight
-SELECT * FROM bookings WHERE flight_id = 101;
-
--- Check staff schedule
-SELECT * FROM staff_schedules WHERE staff_id = 42;
-
-📐 ER Diagram
-
-(Add your ER/EER diagram image here)
-
-diagrams/er_diagram.png
-diagrams/eer_diagram.png
-
-🎓 Academic Context
-This project was developed as part of a Database Management Systems (DBMS) course. It covers:
-
-Conceptual and logical database design (ER/EER modeling)
-Relational schema creation and normalization
-Advanced SQL querying
-PL/SQL programming — stored procedures, functions, triggers, and cursors
-
-
-📄 License
-This project is for educational purposes. Feel free to reference or adapt it for learning.
+```sql
+-- Example: Add image of ER Diagram
+<image-card alt="ER Diagram" src="images/er_diagram.png" ></image-card>
